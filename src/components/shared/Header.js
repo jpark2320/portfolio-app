@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <Link href='/'>
-        <a>Home</a>
+        <a style={{ fontSize: '20px' }}>Home</a>
       </Link>
       <Link href='/about'>
         <a>About</a>

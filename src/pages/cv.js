@@ -1,5 +1,11 @@
+import BaseLayout from 'components/layouts/BaseLayout';
+
 const Cv = () => {
-  return <h1>Cv</h1>;
+  return (
+    <BaseLayout>
+      <h1>Cv</h1>
+    </BaseLayout>
+  );
 };
 
 export default Cv;
