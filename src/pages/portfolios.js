@@ -1,17 +1,21 @@
 import axios from 'axios';
 import BaseLayout from 'components/layouts/BaseLayout';
 
-const Portfolios = (props) => {
-  const { posts } = props;
+const RenderPosts = ({ posts }) => (
+  <ul>
+    {posts.map((post) => (
+      <li key={post.id}>{post.title}</li>
+    ))}
+  </ul>
+);
+
+const Portfolios = ({ posts }) => {
+  console.log('posts1', posts);
+
   return (
     <BaseLayout>
       <h1>Portfolios</h1>
-      <ul>
-        {posts &&
-          posts.map((post, index) => {
-            return <li key={index}>{post.title}</li>;
-          })}
-      </ul>
+      {posts && <RenderPosts posts={posts} />}
     </BaseLayout>
   );
 };
